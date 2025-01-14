@@ -9,12 +9,19 @@ from rich import print as rprint
 def main():
     console = Console()
     console.clear()
-    console.print(Panel.fit("Welcome to the Idea Suggestion Chatbot!", style="bold blue"))
+    console.print(Panel.fit("Welcome to the App Idea Suggestion Chatbot!", style="bold blue"))
     
     chatbot = IdeaSuggestionChatbot()
     
     # Generate initial ideas
-    query = "What new app should I build?"
+    query = Prompt.ask("""
+    💡 Unleash Your Creativity! 💡
+    Type in your areas of interest you wish to build an app!
+    Whether it's fitness, education, entertainment, or productivity, 
+    let your imagination run wild! Share your passions and let's create something amazing together! 🚀\n""")
+
+    if not query.strip():
+        query = "What new app should I build?"
     console.print("\n[yellow]Generating ideas...[/yellow]")
     ideas = chatbot.generate_ideas(query)
     

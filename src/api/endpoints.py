@@ -61,9 +61,10 @@ def initialize_routes(app):
             
             # Get detailed suggestions
             suggestions = chatbot.get_detailed_suggestions(selected_indices)
-            
-            return create_response({"suggestions": suggestions})
+        
         except Exception as e:
             logger.error(f"Error in /generate-ideas: {str(e)}")
             return format_error_response("Failed to generate ideas. Please try again later.")
+        else:
+            return create_response({"suggestions": suggestions})
         
