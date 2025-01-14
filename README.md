@@ -237,6 +237,16 @@ Generating detailed suggestions...
 [Detailed suggestions will be displayed]
 ```
 
+## Screenshots
+
+1] Generate ideas:
+
+![Generated Ideas](src/output_images/generate_ideas.png)
+
+2] Suggestions
+
+![Suggestions](src/output_images/suggestions.png)
+
 ### API Example with Python Requests
 ```python
 import requests
