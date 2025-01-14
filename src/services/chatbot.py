@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Configure logger
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Initialize Gemini
