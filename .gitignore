@@ -1,0 +1,23 @@
+# Exclude the .env file
+.env
+
+# Exclude common virtual environment directories
+venv/
+env/
+.venv/
+G-IdeaBot/
+
+# Exclude the __pycache__ folder
+__pycache__/
+*.py[cod]
+
+# Exclude other common files and directories
+*.pyc
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+*.swp
+*.vscode/
