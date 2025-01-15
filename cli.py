@@ -50,7 +50,7 @@ def main():
             str(idea.get('number', 'N/A')),
             idea.get('title', 'Not Found'),
             idea.get('description', 'Not Found'),
-            str(idea.get('Priority score', 'Not Found')),
+            str(idea.get('Overall Priority Score', 'Not Found')),
             idea.get('Reasoning', 'Not Found')
         )
 
