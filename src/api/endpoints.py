@@ -1,14 +1,9 @@
-from flask import Flask, request, jsonify
+from flask import request, jsonify
 import logging
-from flask_cors import CORS
 from src.services.chatbot import IdeaSuggestionChatbot
 from src.services.common_utils import sort_ideas_based_on_priority, format_error_response
 from src.utils.response_util import create_response
 from src.utils.validation_util import validate_request
-
-# Initialize Flask app
-app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
 
 # Initialize chatbot
 chatbot = IdeaSuggestionChatbot()
